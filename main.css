@@ -1,0 +1,297 @@
+.wrapper {
+    background: rgb(164,139,189);
+    background: linear-gradient(359deg, rgba(164,139,189,1) 0%, rgba(125,15,135,1) 38%, rgba(53,67,232,1) 74%, rgba(15,41,101,1) 100%);
+
+    /* Estilos de grilla */
+    display: grid;
+    width: fit-content;
+    
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer"
+    ;
+
+}
+
+header {
+    grid-area: header;
+    padding: 10px;
+    
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-around;
+}
+nav {
+    grid-area: nav;
+}
+main {
+   
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+    "intro"  
+    "cardsGrid"
+    "infoGrid"
+    ;
+}
+footer {
+    grid-area: footer;
+}
+
+ul li {
+    list-style-type: none;
+    
+    
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+li {
+    display: inline-block;
+    
+    padding: 10px;
+    margin: 0 20px;
+    font-weight: 600;
+    font-size: large;
+       
+}
+/*  animaciones y transiciones */
+li:hover {
+    text-decoration: underline;
+ 
+}
+.logoFadeIn{
+    animation-name: fadeIn;
+    animation-iteration-count: 2;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+}
+
+.cards {
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    border: solid 2px blue;
+    background-color: rgb(59, 159, 199);
+   }
+.info {
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    border: solid 2px blue;
+    background-color: rgb(59, 159, 199);
+
+}
+.center {
+    text-align: center;
+}
+.intro {
+    text-align: center;
+    font-size: large;
+    grid-area: intro;
+}
+.cardsGrid {
+    display: flex;
+    grid-area: cardsGrid;
+    justify-content: space-evenly;
+}
+.infoGrid {
+    grid-area: infoGrid;
+    display: flex;
+    justify-content: space-evenly;
+}
+aside {
+    display: none;
+}
+.footerColor {
+    color: beige;
+}
+.swapFlex {
+    padding: 20px;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.swapMargin {
+    background-color: rgba(115, 176, 249, 0.812);
+    padding: 15px;
+    margin: 5px;
+}
+.stakeFlex {
+    padding: 15px;
+    margin: 20px;
+
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column ;
+    align-items: center;
+    max-width: 100%;
+}
+.stakeFormat {
+    margin: 10px;
+    padding: 10px;
+
+}
+.balances {
+    display: none;
+    padding: 20px;
+    margin: 20px;
+    border: solid 2px beige;
+}
+.rebase {
+
+    padding: 20px;
+    margin: 20px;
+    border: solid 2px beige;
+}
+.faqFormat {
+    border: solid 2px beige;
+    margin: 10px;
+    padding: 15px;
+}
+.farmList {
+    display: block;
+    list-style-type: armenian;
+}
+.listFlex {
+    display: flex;
+    justify-content: center;
+}
+.imgFarm {
+    display: none;
+}
+.kittenPrice {
+    display: none;
+}
+.formMargin {
+    margin: 10px;
+    border: solid 1px;
+    text-align: center;
+}
+.btcPrice {
+    display: none;
+    border: solid 2px beige;
+    margin: 20px;
+    padding: 20px;
+}
+        /* animation logo */
+
+@keyframes fadeIn {
+    0% {
+        transform: translateX(70px);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: translateX(0px);  
+    }
+
+
+}
+            /* media queries */
+
+@media screen and (min-width:768px) {
+    .wrapper {
+        grid-template-areas: 
+        "header nav"
+        "main main"
+        "footer footer"
+        ;
+    }
+    .intro {
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .stakeFlex {
+    
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+    }
+    .balances{
+        display: block;
+        margin: 20px;
+        padding: 20px;
+        border: solid 2px beige;
+    }
+    .faqFlex {
+        display: flex;
+        justify-content: space-between;
+    }
+    .listFlex{
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .imgFarm {
+        display: block;
+
+    }
+    .kittenPrice {
+        display: none;
+    }
+    .btcPrice{
+        display: block;
+        border: solid 2px beige;
+        margin: 20px;
+        padding: 20px;
+    }
+}   
+    
+  
+@media screen and (min-width:1024px) {
+    .wrapper {
+        grid-template-areas: 
+        "header nav nav"
+        "main main aside"
+        "footer footer footer"
+        ;
+        grid-template-columns: 10fr 6fr 1fr;
+    }
+    aside  {
+        padding: 20px;
+        grid-area: aside;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    
+        align-items: center;
+    }
+    .rebase {
+        display: block;
+        margin: 20px;
+        padding: 20px;
+        border: solid 2px beige; 
+    }
+    .balances{
+        display: block;
+        margin: 20px;
+        padding: 20px;
+        border: solid 2px beige;
+    }    
+    .kittenPrice {
+        display: block;
+        border: solid 2px beige;
+        margin: 20px;
+        padding: 20px;
+    }
+    .swapFlex {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+}
