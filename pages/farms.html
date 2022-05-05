@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farms</title>
+
+    <!-- Link al css de bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!-- Link al css propio -->
     <link rel="stylesheet" href="../main.css">
 </head>
 <body>
@@ -25,7 +30,7 @@
                         <li><a href="farms.html">Farms</a></li>
                         <li><a href="faq.html">FAQ</a></li>
                     </ul>
-                    <input type="button" value="Connect Wallet">
+                    <button type="button" class="btn btn-danger btn-lg">Connect Wallet</button>
             </div>
           
         
@@ -36,33 +41,65 @@
                 <h3>Stake LP tokens to earn</h3>
             </div>
 
-            <div class="listFlex">
+            <div class="listFlex flex-wrap">
                 <div class="imgFarm">
                     <img src="https://dummyimage.com/150x150/000/fff" alt="">
                 </div>
-                <section>
-                    <ul class="farmList">
-                        <li class="farmList">Kitten-BNB</li>
-                        <li class="farmList">Kitten-USDC</li>
-                        <li class="farmList">ETH-USDT</li>
-                        <li class="farmList">SOL-ETH</li>
-                        <li class="farmList">DOT-UST</li>
-                        <li class="farmList">TERRA-UST</li>
-                    </ul>
-                </section>
-            
-                <section>
-                    
-                    <ul class="farmList">
-                        <li class="farmList">48%</li>
-                        <li class="farmList">25%</li>
-                        <li class="farmList">11%</li>
-                        <li class="farmList">85%</li>
-                        <li class="farmList">29%</li>
-                        <li class="farmList">44%</li>
+                <section class="p-5">
+                    <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item flex-fill list-group-item-danger">Pair</li>
+                        <li class="list-group-item flex-fill list-group-item-danger">APR</li>
+                        <li class="list-group-item flex-fill list-group-item-danger">Liquidity</li>
+                      </ul>
+                    <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item flex-fill list-group-item-success">Kitten-BNB</li>
+                        <li class="list-group-item flex-fill list-group-item-success">48%</li>
+                        <li class="list-group-item flex-fill list-group-item-success">$55,345,235</li>
+                        
+                      </ul>
+                      <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item flex-fill list-group-item-success">Kitten-USDC</li>
+                        <li class="list-group-item flex-fill list-group-item-success">25%</li>
+                        <li class="list-group-item flex-fill list-group-item-success">$85,358,348</li>
+                      </ul>
+                      <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item flex-fill list-group-item-success">ETH-USDT</li>
+                        <li class="list-group-item flex-fill list-group-item-success">33%</li>
+                        <li class="list-group-item flex-fill list-group-item-success">$150,381,398</li>
+                      </ul>
+                      <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item flex-fill list-group-item-success">SOL-ETH</li>
+                        <li class="list-group-item flex-fill list-group-item-success">15%</li>
+                        <li class="list-group-item flex-fill list-group-item-success">$75,258,369</li>
+                      </ul>
+                      <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item flex-fill list-group-item-success">DOT-UST</li>
+                        <li class="list-group-item flex-fill list-group-item-success">55%</li>
+                        <li class="list-group-item flex-fill list-group-item-success">$258,879,147</li>
+                      </ul>
+                      <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item flex-fill list-group-item-success">TERRA-UST</li>
+                        <li class="list-group-item flex-fill list-group-item-success">37%</li>
+                        <li class="list-group-item flex-fill list-group-item-success">$159,585,967</li>
+                      </ul>
 
-                    </ul>
                 </section>
+                <section>
+                    <select class="form-select m-2" aria-label="Default select example">
+                        <option selected>Select Lp Pair</option>
+                        <option value="1">Kitten-BNB</option>
+                        <option value="2">Kitten-USDC</option>
+                        <option value="3">DOT-UST</option>
+                        <option value="4">ETH-USDT</option>
+                        <option value="5">TERRA-UST</option>
+                        <option value="5">SOL-ETH</option>
+                    </select>
+                      
+                    <input type="number" class="form-control" placeholder="Select Amount" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                    <button class="btn btn-success" type="button" id="button-addon1">Max</button>
+                    <button class="btn btn-success" type="button" id="button-addon1">Add LP</button>
+                </section>
+               
                 <div class="center kittenPrice">
                     <h2>$5.4</h2>
                     <h3>Kitten Price</h3>
