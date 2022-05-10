@@ -30,12 +30,7 @@ nav {
 main {
    
     grid-area: main;
-    display: grid;
-    grid-template-areas:
-    "intro"  
-    "cardsGrid"
-    "infoGrid"
-    ;
+   
 }
 footer {
     grid-area: footer;
@@ -167,14 +162,35 @@ aside {
     margin: 20px;
     padding: 20px;
 }
-.cardGames {
-    display: none;
-}
+
+
 .tabStyle {
     color: black;
+}
+.cardGames {
+    display: none;
+    background-color: rgb(210, 165, 253);
+    padding: 100px;
+    margin: 15px;
+    border-radius: 25px;
+}
+.cardLottery {
+    background-color: hsla(240, 100%, 68%, 0.764);
+    border-radius: 30px;
+    transform: rotate(-2deg);
+}
+.cardPrediction {
+    background-color: rgb(160, 160, 24);
+    transform: rotate(2deg);
+    border-radius: 30px;
+}
+.card-title {
+    font-weight: bolder;
+    color: rgb(34, 70, 34);
+}
     
 
-}
+
         /* animation logo */
 
 @keyframes fadeIn {
@@ -240,25 +256,8 @@ aside {
     }
     .cardGames {
         display: block;
-        background-color: rgb(210, 165, 253);
-        padding: 100px;
-        margin: 15px;
-        border-radius: 25px;
     }
-    .cardLottery {
-        background-color: hsla(240, 100%, 68%, 0.764);
-        border-radius: 30px;
-        transform: rotate(-2deg);
-    }
-    .cardPrediction {
-        background-color: rgb(160, 160, 24);
-        transform: rotate(2deg);
-        border-radius: 30px;
-    }
-    .card-title {
-        font-weight: bolder;
-        color: rgb(34, 70, 34);
-    }
+    
 }   
     
   
@@ -277,7 +276,7 @@ aside {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        
+        max-height: 100vh;
         align-items: center;
     }
     .rebase {
