@@ -1,0 +1,72 @@
+// Media queries
+@media screen and (min-width:768px) {
+    .wrapper {
+        grid-template-areas: 
+        "header nav"
+        "main main"
+        "footer footer"
+        ;
+    }
+    .stakeFlex {
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;  
+    }
+    .balances{
+        display: block;
+    }
+    .faqFlex {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    
+    .imgFarm {
+        display: block;
+        margin: $margin;
+        padding: $padding;
+    }
+    .kittenPrice {
+        display: none;
+    }
+    .btcPrice{
+        display: block;
+    }    
+    .cardGames {
+        display: block;
+    }  
+
+} 
+@media screen and (min-width:1024px) {
+    .wrapper {
+        grid-template-areas: 
+        "header nav nav"
+        "main main aside"
+        "footer footer footer"
+        ;
+        grid-template-columns: 10fr 6fr 1fr;
+    }
+    aside {
+        padding: $padding;
+        grid-area: aside;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        max-height: 100vh;
+        align-items: center;
+    }
+    .rebase {
+        display: block;
+    }
+    .balances{
+        display: block;
+    }  
+    .kittenPrice {
+        display: block;
+    }
+    .swapFlex {
+        flex-direction: row;
+        justify-content: space-between;
+    }   
+    
+}

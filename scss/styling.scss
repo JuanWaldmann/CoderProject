@@ -1,0 +1,158 @@
+// variables
+
+$bg-color: linear-gradient(359deg, rgba(164,139,189,1) 0%, rgba(125,15,135,1) 38%, rgba(53,67,232,1) 74%, rgba(15,41,101,1) 100%);
+$footer-color: beige;
+$border: solid 2px beige;
+$margin: 20px;
+$padding: 20px;
+$border-radius: 30px;
+
+
+// comienza estilado principal
+header {
+    grid-area: header;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav {
+    grid-area: nav;
+}
+nav div {
+    display: flex;
+    justify-content: center;
+}
+ul { list-style-type: none;
+    li {
+        display: inline-block;
+        padding: 10px;
+        margin: 0px 20px;
+        font-weight: 600;
+        font-size: large;
+        &:visited { color: black;}
+        &:hover {text-decoration: underline;}
+        a {
+            text-decoration: none;
+            color: black;
+            &:visited { color: black;}
+        }
+    }
+}
+a {
+    text-decoration: none;
+    color: black;
+    &:visited { color: black;}
+}
+main {
+    grid-area: main;
+    section {
+        text-align: center;
+        font-size: large;   
+    }
+    div section {
+        padding: $padding;
+        margin: $margin;
+        border: $border;
+    }
+}
+footer {
+    grid-area: footer;
+    color: $footer-color;
+}
+aside {
+    display: none;
+}
+// estilado de wrapper grilla
+.wrapper {
+    background: $bg-color;
+    // estilos de grilla
+    display: grid;
+    width: fit-content;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer"
+    ;
+}
+// animacion logo
+.logoFadeIn{
+    animation-name: fadeIn;
+    animation-iteration-count: 2;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+}
+.center {
+    text-align: center;
+}
+.swapFlex {
+    padding: 20px;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-direction: column;
+}
+.swapMargin {
+    background-color: rgba(115, 176, 249, 0.812);
+    padding: 15px;
+    margin: 5px;
+}
+.stakeFlex {
+    padding: 15px;
+    margin: 20px;
+
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column ;
+    align-items: center;
+    max-width: 100%;
+}
+.listFlex {
+    display: flex;
+    justify-content: space-evenly;
+}
+.imgFarm {
+    display: none;
+}
+.kittenPrice {
+    display: none;
+}
+.btcPrice {
+    display: none;
+}
+.cardGames {
+    display: none;
+    background-color: rgb(210, 165, 253);
+    padding: 100px;
+    margin: $margin;
+    border-radius: $border-radius;
+}
+.cardLottery {
+    background-color: hsla(240, 100%, 68%, 0.764);
+    border-radius: $border-radius;
+    transform: rotate(-2deg);
+}
+.cardPrediction {
+    background-color: rgb(160, 160, 24);
+    transform: rotate(2deg);
+    border-radius: $border-radius;
+}
+.card-title {
+    font-weight: bolder;
+    color: rgba(34, 16, 80, 0.784);
+}
+// animaciones
+@keyframes fadeIn {
+    0% {
+        transform: translateX(70px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);  
+    }
+}
+// media queries
+@import "media";

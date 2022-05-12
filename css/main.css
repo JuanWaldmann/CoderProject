@@ -1,0 +1,177 @@
+header {
+  grid-area: header;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+
+nav {
+  grid-area: nav; }
+
+nav div {
+  display: flex;
+  justify-content: center; }
+
+ul {
+  list-style-type: none; }
+  ul li {
+    display: inline-block;
+    padding: 10px;
+    margin: 0px 20px;
+    font-weight: 600;
+    font-size: large; }
+    ul li:visited {
+      color: black; }
+    ul li:hover {
+      text-decoration: underline; }
+    ul li a {
+      text-decoration: none;
+      color: black; }
+      ul li a:visited {
+        color: black; }
+
+a {
+  text-decoration: none;
+  color: black; }
+  a:visited {
+    color: black; }
+
+main {
+  grid-area: main; }
+  main section {
+    text-align: center;
+    font-size: large; }
+  main div section {
+    padding: 20px;
+    margin: 20px;
+    border: solid 2px beige; }
+
+footer {
+  grid-area: footer;
+  color: beige; }
+
+aside {
+  display: none; }
+
+.wrapper {
+  background: linear-gradient(359deg, #a48bbd 0%, #7d0f87 38%, #3543e8 74%, #0f2965 100%);
+  display: grid;
+  width: fit-content;
+  grid-template-areas: "header" "nav" "main" "footer"; }
+
+.logoFadeIn {
+  animation-name: fadeIn;
+  animation-iteration-count: 2;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 0.5s; }
+
+.center {
+  text-align: center; }
+
+.swapFlex {
+  padding: 20px;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  flex-direction: column; }
+
+.swapMargin {
+  background-color: rgba(115, 176, 249, 0.812);
+  padding: 15px;
+  margin: 5px; }
+
+.stakeFlex {
+  padding: 15px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%; }
+
+.listFlex {
+  display: flex;
+  justify-content: space-evenly; }
+
+.imgFarm {
+  display: none; }
+
+.kittenPrice {
+  display: none; }
+
+.btcPrice {
+  display: none; }
+
+.cardGames {
+  display: none;
+  background-color: #d2a5fd;
+  padding: 100px;
+  margin: 20px;
+  border-radius: 30px; }
+
+.cardLottery {
+  background-color: rgba(92, 92, 255, 0.764);
+  border-radius: 30px;
+  transform: rotate(-2deg); }
+
+.cardPrediction {
+  background-color: #a0a018;
+  transform: rotate(2deg);
+  border-radius: 30px; }
+
+.card-title {
+  font-weight: bolder;
+  color: rgba(34, 16, 80, 0.784); }
+
+@keyframes fadeIn {
+  0% {
+    transform: translateX(70px);
+    opacity: 0; }
+  100% {
+    transform: translateX(0px); } }
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    grid-template-areas: "header nav" "main main" "footer footer"; }
+  .stakeFlex {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap; }
+  .balances {
+    display: block; }
+  .faqFlex {
+    display: flex;
+    justify-content: space-between; }
+  .imgFarm {
+    display: block;
+    margin: 20px;
+    padding: 20px; }
+  .kittenPrice {
+    display: none; }
+  .btcPrice {
+    display: block; }
+  .cardGames {
+    display: block; } }
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    grid-template-areas: "header nav nav" "main main aside" "footer footer footer";
+    grid-template-columns: 10fr 6fr 1fr; }
+  aside {
+    padding: 20px;
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-height: 100vh;
+    align-items: center; }
+  .rebase {
+    display: block; }
+  .balances {
+    display: block; }
+  .kittenPrice {
+    display: block; }
+  .swapFlex {
+    flex-direction: row;
+    justify-content: space-between; } }
