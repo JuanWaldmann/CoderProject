@@ -1,27 +1,58 @@
 // variables
 
 $bg-color: linear-gradient(359deg, rgba(164,139,189,1) 0%, rgba(125,15,135,1) 38%, rgba(53,67,232,1) 74%, rgba(15,41,101,1) 100%);
-$footer-color: beige;
 $border: solid 2px beige;
-$margin: 20px;
-$padding: 20px;
+$margin: 15px;
+$padding: 15px;
 $border-radius: 30px;
 
+//mapas
+$contacto: (
+    Twitter: rgb(20, 101, 171),
+    Discord: rgb(79, 152, 249),
+    Telegram: rgb(76, 180, 255),
+    Youtube: rgb(200, 20, 20),
+);
+@each $platform, $color in $contacto {
+    .color#{$platform} {
+        color: $color;
+    }
+}
+//Extend
+.welcome {
+    font-size: 900;
+    font-style: italic;
+    color: rgb(196, 126, 42)
+}
+.welcomeSubtitle {
+    @extend .welcome;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px; 
+    font-weight: 600;   
+}
+// mixin
+@mixin spacing ($margin, $padding){
+    margin: $margin;
+    padding: $padding;
+}
 
 // comienza estilado principal
 header {
     grid-area: header;
-    padding: 10px;
+    
     display: flex;
     align-items: center;
     justify-content: space-around;
+    @include spacing($padding,$margin)
 }
 nav {
     grid-area: nav;
 }
 nav div {
+
     display: flex;
     justify-content: center;
+    @include spacing($padding,$margin)
 }
 ul { list-style-type: none;
     li {
@@ -58,7 +89,6 @@ main {
 }
 footer {
     grid-area: footer;
-    color: $footer-color;
 }
 aside {
     display: none;
@@ -77,7 +107,7 @@ aside {
     ;
 }
 // animacion logo
-.logoFadeIn{
+.logoFadeIn {
     animation-name: fadeIn;
     animation-iteration-count: 2;
     animation-duration: 2s;
@@ -88,20 +118,20 @@ aside {
     text-align: center;
 }
 .swapFlex {
-    padding: 20px;
+    
     display: flex;
     justify-content: stretch;
     align-items: center;
     flex-direction: column;
+
+    @include spacing($padding,$margin)
 }
 .swapMargin {
     background-color: rgba(115, 176, 249, 0.812);
-    padding: 15px;
-    margin: 5px;
+    @include spacing($padding,$margin)
 }
 .stakeFlex {
-    padding: 15px;
-    margin: 20px;
+    
 
     display: flex;
     justify-content: center;
@@ -109,6 +139,7 @@ aside {
     flex-direction: column ;
     align-items: center;
     max-width: 100%;
+    @include spacing($padding,$margin)
 }
 .listFlex {
     display: flex;
