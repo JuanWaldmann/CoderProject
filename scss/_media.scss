@@ -7,6 +7,7 @@
         "footer footer"
         ;
     }
+
     .stakeFlex {
         flex-direction: row;
         justify-content: space-evenly;
@@ -19,7 +20,14 @@
         display: flex;
         justify-content: space-between;
     }
-    
+    .earned {
+        grid-area: earned;
+        display: block;
+    }
+    .details {
+        grid-area: details;
+        display: block;
+    } 
     
     .imgFarm {
         display: block;
@@ -45,6 +53,10 @@
         "footer footer footer"
         ;
         grid-template-columns: 10fr 6fr 1fr;
+    }
+    
+    nav div {
+        flex-direction: row;
     }
     aside {
         padding: $padding;

@@ -34,6 +34,7 @@ nav {
 nav div {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   margin: 15px;
   padding: 15px; }
 
@@ -149,6 +150,58 @@ aside {
   font-weight: bolder;
   color: rgba(34, 16, 80, 0.784); }
 
+.farmWrapper {
+  background-color: #020033;
+  display: flex;
+  flex-direction: column;
+  padding: 20px; }
+
+.radius {
+  border-radius: 30px; }
+
+.farmGrid {
+  background-color: #9090f0;
+  display: grid;
+  padding: 25px 75px;
+  grid-template-areas: "pair apy apr liquidity earned details";
+  column-gap: 24px;
+  height: auto;
+  margin: 0 50px; }
+
+.pair {
+  grid-area: pair; }
+
+.apy {
+  grid-area: apy; }
+
+.apr {
+  grid-area: apr; }
+
+.liquidity {
+  grid-area: liquidity; }
+
+.earned {
+  grid-area: earned;
+  display: none; }
+
+.details {
+  grid-area: details;
+  display: none; }
+
+.apyFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: larger; }
+
+.radiusFarm {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px; }
+
+.radiusFarmBot {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px; }
+
 @keyframes fadeIn {
   0% {
     transform: translateX(70px);
@@ -168,6 +221,12 @@ aside {
   .faqFlex {
     display: flex;
     justify-content: space-between; }
+  .earned {
+    grid-area: earned;
+    display: block; }
+  .details {
+    grid-area: details;
+    display: block; }
   .imgFarm {
     display: block;
     margin: 15px;
@@ -183,6 +242,8 @@ aside {
   .wrapper {
     grid-template-areas: "header nav nav" "main main aside" "footer footer footer";
     grid-template-columns: 10fr 6fr 1fr; }
+  nav div {
+    flex-direction: row; }
   aside {
     padding: 15px;
     grid-area: aside;
