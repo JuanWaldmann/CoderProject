@@ -33,7 +33,7 @@ nav {
 
 nav div {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   margin: 15px;
   padding: 15px; }
@@ -73,7 +73,8 @@ main {
     border: solid 2px beige; }
 
 footer {
-  grid-area: footer; }
+  grid-area: footer;
+  padding: 15px; }
 
 aside {
   display: none; }
@@ -82,6 +83,7 @@ aside {
   background: linear-gradient(359deg, #a48bbd 0%, #7d0f87 38%, #3543e8 74%, #0f2965 100%);
   display: grid;
   width: fit-content;
+  min-height: 100vh;
   grid-template-areas: "header" "nav" "main" "footer"; }
 
 .logoFadeIn {
@@ -150,26 +152,42 @@ aside {
   font-weight: bolder;
   color: rgba(34, 16, 80, 0.784); }
 
+.farmFlex {
+  display: flex;
+  justify-content: center; }
+
 .farmWrapper {
   background-color: #020033;
   display: flex;
   flex-direction: column;
-  padding: 20px; }
-
-.radius {
-  border-radius: 30px; }
+  padding: 20px;
+  border-radius: 30px;
+  width: 75%;
+  min-width: fit-content; }
 
 .farmGrid {
-  background-color: #9090f0;
+  background-color: #c3fffb;
   display: grid;
   padding: 25px 75px;
   grid-template-areas: "pair apy apr liquidity earned details";
   column-gap: 24px;
-  height: auto;
   margin: 0 50px; }
 
+.farmTitle {
+  font-weight: bolder;
+  font-size: x-small;
+  color: #50257b;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+.farmInfo {
+  font-size: x-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgba(126, 12, 12, 0.877);
+  font-style: italic; }
+
 .pair {
-  grid-area: pair; }
+  grid-area: pair;
+  white-space: nowrap; }
 
 .apy {
   grid-area: apy; }
@@ -178,7 +196,9 @@ aside {
   grid-area: apr; }
 
 .liquidity {
-  grid-area: liquidity; }
+  grid-area: liquidity;
+  white-space: nowrap;
+  display: none; }
 
 .earned {
   grid-area: earned;
@@ -208,6 +228,10 @@ aside {
     opacity: 0; }
   100% {
     transform: translateX(0px); } }
+
+@media screen and (min-width: 380px) {
+  .liquidity {
+    display: block; } }
 
 @media screen and (min-width: 768px) {
   .wrapper {
@@ -241,7 +265,7 @@ aside {
 @media screen and (min-width: 1024px) {
   .wrapper {
     grid-template-areas: "header nav nav" "main main aside" "footer footer footer";
-    grid-template-columns: 10fr 6fr 1fr; }
+    grid-template-columns: 8fr 12fr 1fr; }
   nav div {
     flex-direction: row; }
   aside {

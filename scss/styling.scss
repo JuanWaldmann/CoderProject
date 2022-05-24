@@ -51,7 +51,7 @@ nav {
 nav div {
 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     @include spacing($padding,$margin)
 }
@@ -90,6 +90,7 @@ main {
 }
 footer {
     grid-area: footer;
+    padding: $padding;
 }
 aside {
     display: none;
@@ -100,6 +101,7 @@ aside {
     // estilos de grilla
     display: grid;
     width: fit-content;
+    min-height: 100vh;
     grid-template-areas: 
     "header"
     "nav"
@@ -176,30 +178,46 @@ aside {
     font-weight: bolder;
     color: rgba(34, 16, 80, 0.784);
 }
-
+.farmFlex {
+    display: flex;
+    justify-content: center;
+}
 .farmWrapper {
     background-color: rgb(2, 0, 51);
     display: flex;
     flex-direction: column;
     padding: 20px;
-    
-}
-.radius {
     border-radius: $border-radius;
+    width: 75%;
+    min-width: fit-content;  
 }
+
 .farmGrid {
     
-    background-color: rgb(144, 144, 240);
+    background-color: rgb(195, 255, 251);
     display: grid;
     padding: 25px 75px;
     grid-template-areas: "pair apy apr liquidity earned details" ;
     column-gap: 24px;
-    height: auto;
-    margin: 0 50px;
+    margin: 0 50px;    
+}
+.farmTitle {
+    font-weight: bolder;
+    font-size: x-small;
+    color: rgb(80, 37, 123);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     
+
+}
+.farmInfo{
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(126, 12, 12, 0.877);
+    font-style: italic;
 }
 .pair {
     grid-area: pair;
+    white-space: nowrap;
 }
 .apy {
     grid-area: apy;
@@ -209,6 +227,8 @@ aside {
 }
 .liquidity {
     grid-area: liquidity;
+    white-space: nowrap;
+    display: none;
 }
 .earned {
     grid-area: earned;
