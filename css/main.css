@@ -160,7 +160,7 @@ aside {
   background-color: #020033;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px;
   border-radius: 30px;
   width: 75%;
   min-width: fit-content; }
@@ -168,10 +168,10 @@ aside {
 .farmGrid {
   background-color: #c3fffb;
   display: grid;
-  padding: 25px 75px;
-  grid-template-areas: "pair apy apr liquidity earned details";
-  column-gap: 24px;
-  margin: 0 50px; }
+  grid-template-areas: "pair apy apr";
+  grid-template-columns: 3fr 3fr 3fr;
+  column-gap: 2px;
+  padding: 10px; }
 
 .farmTitle {
   font-weight: bolder;
@@ -180,7 +180,7 @@ aside {
   font-family: Verdana, Geneva, Tahoma, sans-serif; }
 
 .farmInfo {
-  font-size: x-large;
+  font-size: small;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgba(126, 12, 12, 0.877);
   font-style: italic; }
@@ -214,6 +214,9 @@ aside {
   align-items: flex-start;
   font-size: larger; }
 
+.nftP {
+  display: none; }
+
 .radiusFarm {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px; }
@@ -229,13 +232,22 @@ aside {
   100% {
     transform: translateX(0px); } }
 
-@media screen and (min-width: 380px) {
-  .liquidity {
-    display: block; } }
-
 @media screen and (min-width: 768px) {
   .wrapper {
     grid-template-areas: "header nav" "main main" "footer footer"; }
+  .farmGrid {
+    background-color: #c3fffb;
+    display: grid;
+    padding: 25px 75px;
+    grid-template-areas: "pair apy apr liquidity earned details";
+    column-gap: 24px;
+    margin: 0 50px; }
+  .farmWrapper {
+    padding: 20px; }
+  .farmInfo {
+    font-size: medium; }
+  .liquidity {
+    display: block; }
   .stakeFlex {
     flex-direction: row;
     justify-content: space-evenly;
@@ -245,12 +257,6 @@ aside {
   .faqFlex {
     display: flex;
     justify-content: space-between; }
-  .earned {
-    grid-area: earned;
-    display: block; }
-  .details {
-    grid-area: details;
-    display: block; }
   .imgFarm {
     display: block;
     margin: 15px;
@@ -260,12 +266,18 @@ aside {
   .btcPrice {
     display: block; }
   .cardGames {
-    display: block; } }
+    display: block; }
+  .nftP {
+    display: inline; } }
 
 @media screen and (min-width: 1024px) {
   .wrapper {
     grid-template-areas: "header nav nav" "main main aside" "footer footer footer";
     grid-template-columns: 8fr 12fr 1fr; }
+  .earned {
+    display: block; }
+  .details {
+    display: block; }
   nav div {
     flex-direction: row; }
   aside {
@@ -284,4 +296,6 @@ aside {
     display: block; }
   .swapFlex {
     flex-direction: row;
-    justify-content: space-between; } }
+    justify-content: space-between; }
+  .farmInfo {
+    font-size: large; } }

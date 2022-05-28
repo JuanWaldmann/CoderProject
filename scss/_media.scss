@@ -1,9 +1,5 @@
 // Media queries
-@media screen and (min-width: 380px) {
-    .liquidity {
-        display: block;
-    }
-}
+
 @media screen and (min-width:768px) {
     .wrapper {
         grid-template-areas: 
@@ -11,6 +7,24 @@
         "main main"
         "footer footer"
         ;
+    }
+    .farmGrid {
+    
+        background-color: rgb(195, 255, 251);
+        display: grid;
+        padding: 25px 75px;
+        grid-template-areas: "pair apy apr liquidity earned details" ;
+        column-gap: 24px;
+        margin: 0 50px;    
+    }
+    .farmWrapper {
+        padding: 20px;
+    } 
+    .farmInfo{
+        font-size: medium;
+    }
+    .liquidity {
+        display: block;
     }
 
     .stakeFlex {
@@ -25,14 +39,6 @@
         display: flex;
         justify-content: space-between;
     }
-    .earned {
-        grid-area: earned;
-        display: block;
-    }
-    .details {
-        grid-area: details;
-        display: block;
-    } 
     
     .imgFarm {
         display: block;
@@ -48,7 +54,9 @@
     .cardGames {
         display: block;
     }  
-
+    .nftP{
+        display: inline;
+    }
 } 
 @media screen and (min-width:1024px) {
     .wrapper {
@@ -59,6 +67,13 @@
         ;
         grid-template-columns: 8fr 12fr 1fr;
     }
+    .earned {
+        display: block;
+    }
+    .details {
+        display: block;
+    }
+
     
     nav div {
         flex-direction: row;
@@ -85,5 +100,8 @@
         flex-direction: row;
         justify-content: space-between;
     }   
-    
+    .farmInfo{
+        font-size: large;
+        
+    }
 }
