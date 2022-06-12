@@ -12,7 +12,7 @@
     <meta name="description" content="Kitten swap it's a decentralized exchange where you can swap tokens, find the best yield and collect amazing nfts, get in touch with our amazing community">
 
     <!-- Favicon -->
-    <link rel="icon" href="">
+    <link rel="icon" href="md.png">
 
 
     <title>Kitten Swap</title>
@@ -22,13 +22,18 @@
 
     <!-- Link al estilado propio -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- Link a google font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <div class="wrapper">
         
         <header>
-            <img class="logoFadeIn" src="public/logo.png" alt="logo">
+            <a href="index.html"><img class="logoFadeIn" src="public/imgs/logo.png" alt="logo"></a>
             <div>
                 <a href="index.html"><h1>Kitten Swap</h1></a>
             </div>
@@ -50,6 +55,7 @@
               
         <main>
                 <section>
+                    <!-- Seccion de bienvenida al sitio -->
                     <div>
                         <h2 class="welcome">Start earning passive income now</h2>
                         <h4 class="welcome welcomeSubtitle">Swap, earn, stack yields, lend, borrow, leverage all on one decentralized, community driven platform. Welcome home to DeFi.</h4>
@@ -57,29 +63,31 @@
                     </div>
                 
                     <div>
-                        <img class="mw-100" style="width: 400px; height: auto;" src="public/frontPage.png" alt="">   
+                        <img class="mw-100" style="width: 400px; height: auto;" src="public/imgs/frontPage.png" alt="">   
                     </div>
                 
                 </section>
+                <!-- Seccion de introduccion a los productos del sitio -->
+
             <section class="d-flex justify-content-around p-5 flex-wrap">
-                <div class="card m-2" style="width: 18rem; background: linear-gradient(359deg, rgba(164,139,189,1) 0%, rgba(125,15,135,1) 38%, rgba(53,67,232,1) 74%, rgba(15,41,101,1) 100%);">
-                    <img src="public/swap.jfif" class="card-img-top" style="object-fit: none;" alt="...">
+                <div class="card m-2 cardBorder" style="width: 18rem;">
+                    <img src="public/imgs/swap.jfif" class="card-img-top actualSize" alt="...">
                     <div class="card-body center">
                       <h5 class="card-title">Swap</h5>
                       <p class="card-text">The most competitive rates for DeFi bluechips anywhere. Switch to other chains in one click</p>
                       <a href="pages/swap.html" class="btn btn-success">Go Swap</a>
                     </div>
                 </div>
-                <div class="card m-2" style="width: 18rem; background: linear-gradient(359deg, rgba(164,139,189,1) 0%, rgba(125,15,135,1) 38%, rgba(53,67,232,1) 74%, rgba(15,41,101,1) 100%);">
-                    <img src="public/stakeLogo.webp" class="card-img-top" style="object-fit: none;" alt="...">
+                <div class="card m-2 cardBorder" style="width: 18rem;">
+                    <img src="public/imgs/stakeLogo.webp" class="card-img-top actualSize" alt="...">
                     <div class="card-body center">
                       <h5 class="card-title">Stake</h5>
                       <p class="card-text">Earn governance rights and 0.05% of all swaps from all chains in one simple place</p>
                       <a href="pages/stake.html" class="btn btn-success">Go Stake</a>
                     </div>
                 </div>
-                <div class="card m-2" style="width: 18rem; background: linear-gradient(359deg, rgba(164,139,189,1) 0%, rgba(125,15,135,1) 38%, rgba(53,67,232,1) 74%, rgba(15,41,101,1) 100%);">
-                    <img src="public/faq.png" class="card-img-top" style="object-fit: none;" alt="...">
+                <div class="card m-2 cardBorder" style="width: 18rem;">
+                    <img src="public/imgs/faq.png" class="card-img-top actualSize" alt="...">
                     <div class="card-body center">
                       <h5 class="card-title">Learn More</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -87,6 +95,8 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Promocion de los ultimos desarrollos -->
             <div class="d-flex justify-content-center">
                 <section class="cardGames">
                     <div class="p-5 pt-0">
@@ -94,7 +104,7 @@
                     </div>
                 <div class="d-flex">
                     <div class="card justify-content-center p-4 m-2 cardLottery" style="width: 18rem;">
-                        <img src="public/cryptocurrencyLottery.png" style="object-fit: none;" class="card-img-top" alt="...">
+                        <img src="public/imgs/cryptocurrencyLottery.png" class="card-img-top actualSize" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">Lottery</h5>
                           <h3 class="CardGameImportant">$152.320</h3>
@@ -104,7 +114,7 @@
                         </div>
                     </div>
                     <div class="card justify-content-center p-4 m-2 cardPrediction" style="width: 18rem;">
-                        <img src="public/predictionGame.png" style="object-fit: none;" class="card-img-top" alt="...">
+                        <img src="public/imgs/predictionGame.png" class="card-img-top actualSize" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">Prediction</h5>
                           <h3 class="CardGameImportant">$75 Millions</h3>
@@ -118,26 +128,28 @@
             </div> 
       
         </main>
+        <!-- seccion aside con la mejor rentabilidad de productos -->
     <aside>
             <section>
                 <div class="center">
-                    <img src="public/featuredToken.png" alt="">
+                    <img src="public/imgs/featuredToken.png" alt="">
                     <p>Featured token</p>
                 </div>
             </section>
             <section>
                 <div class="center">
-                    <img class="mw-100" src="public/featuredNFT.png" alt="">
+                    <img class="mw-100" src="public/imgs/featuredNFT.png" alt="">
                     <p>Featured NFT</p>
                 </div>
             </section>
             <section>
                 <div class="center">
-                    <img src="public/featuredDEX.png" alt="">
+                    <img src="public/imgs/featuredDEX.png" alt="">
                     <p>Best yields</p>
                 </div>
             </section>
     </aside>
+    <!-- Footer y contacto -->
     <footer>
         <div class="center">
                 <h3>Get in touch</h3>

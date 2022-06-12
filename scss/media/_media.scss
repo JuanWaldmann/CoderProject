@@ -9,9 +9,6 @@
         ;
     }
     .farmGrid {
-    
-        background-color: rgb(195, 255, 251);
-        display: grid;
         padding: 25px 75px;
         grid-template-areas: "pair apy apr liquidity earned details" ;
         column-gap: 24px;

@@ -1,0 +1,10 @@
+nav {
+    grid-area: nav;
+}
+nav div {
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    @include spacing($padding,$margin)
+}

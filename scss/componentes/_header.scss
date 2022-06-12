@@ -1,0 +1,13 @@
+// mixin
+@mixin spacing ($margin, $padding){
+    margin: $margin;
+    padding: $padding;
+}
+header {
+    grid-area: header;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @include spacing($padding,$margin)
+}

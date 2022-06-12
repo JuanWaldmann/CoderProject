@@ -1,3 +1,25 @@
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 15px;
+  padding: 15px; }
+
+nav {
+  grid-area: nav; }
+
+nav div {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 15px;
+  padding: 15px; }
+
+footer {
+  grid-area: footer;
+  padding: 15px; }
+
 .colorTwitter {
   color: #1465ab; }
 
@@ -16,27 +38,9 @@
   color: #c47e2a; }
 
 .welcomeSubtitle {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Slab', serif;
   padding: 10px;
   font-weight: 600; }
-
-header {
-  grid-area: header;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin: 15px;
-  padding: 15px; }
-
-nav {
-  grid-area: nav; }
-
-nav div {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  margin: 15px;
-  padding: 15px; }
 
 ul {
   list-style-type: none; }
@@ -72,15 +76,12 @@ main {
     margin: 15px;
     border: solid 2px beige; }
 
-footer {
-  grid-area: footer;
-  padding: 15px; }
-
 aside {
-  display: none; }
+  display: none;
+  max-height: 50%; }
 
 .wrapper {
-  background: linear-gradient(359deg, #a48bbd 0%, #7d0f87 38%, #3543e8 74%, #0f2965 100%);
+  background: linear-gradient(90deg, #be98e4 0%, #83118e 50%, #410773 100%);
   display: grid;
   width: fit-content;
   min-height: 100vh;
@@ -94,7 +95,8 @@ aside {
   animation-delay: 0.5s; }
 
 .center {
-  text-align: center; }
+  text-align: center;
+  font-family: 'roboto-slab'; }
 
 .swapFlex {
   display: flex;
@@ -131,22 +133,30 @@ aside {
 .btcPrice {
   display: none; }
 
+.cardBorder, .nftBorder {
+  border-radius: 20px;
+  border: solid 2px beige;
+  background: linear-gradient(359deg, #a48bbd 0%, #7d0f87 38%, #3543e8 74%, #0f2965 100%); }
+
+.actualSize {
+  object-fit: none; }
+
 .cardGames {
   display: none;
   background-color: #d2a5fd;
   padding: 100px;
   margin: 15px;
-  border-radius: 30px; }
+  border-radius: 40px; }
 
 .cardLottery {
   background-color: rgba(92, 92, 255, 0.764);
-  border-radius: 30px;
+  border-radius: 40px;
   transform: rotate(-2deg); }
 
 .cardPrediction {
   background-color: #a0a018;
   transform: rotate(2deg);
-  border-radius: 30px; }
+  border-radius: 40px; }
 
 .card-title {
   font-weight: bolder;
@@ -156,12 +166,17 @@ aside {
   display: flex;
   justify-content: center; }
 
+hr {
+  margin: 0;
+  border: solid 3px;
+  color: black; }
+
 .farmWrapper {
-  background-color: #020033;
+  background-color: #000052;
   display: flex;
   flex-direction: column;
   padding: 10px;
-  border-radius: 30px;
+  border-radius: 40px;
   width: 75%;
   min-width: fit-content; }
 
@@ -177,11 +192,11 @@ aside {
   font-weight: bolder;
   font-size: x-small;
   color: #50257b;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+  font-family: 'Roboto Slab', serif; }
 
 .farmInfo {
   font-size: small;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Roboto Slab', serif;
   color: rgba(126, 12, 12, 0.877);
   font-style: italic; }
 
@@ -218,12 +233,12 @@ aside {
   display: none; }
 
 .radiusFarm {
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px; }
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px; }
 
 .radiusFarmBot {
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px; }
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px; }
 
 @keyframes fadeIn {
   0% {
@@ -236,8 +251,6 @@ aside {
   .wrapper {
     grid-template-areas: "header nav" "main main" "footer footer"; }
   .farmGrid {
-    background-color: #c3fffb;
-    display: grid;
     padding: 25px 75px;
     grid-template-areas: "pair apy apr liquidity earned details";
     column-gap: 24px;
